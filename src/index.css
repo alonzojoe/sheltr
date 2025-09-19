@@ -1,0 +1,42 @@
+@import 'tailwindcss';
+
+@theme {
+    --color-primary: #1E3240;
+    --color-accent: ##ECF1F8;
+    --color-text-title: #212121;
+    --color-text-sub: #676767;
+    --text-title: 64px;
+    --text-body: 18px;
+    --text-smaller: 14px;
+}
+
+@utility flex-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+@utility flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@utility flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@utility flex-end {
+    display: flex;
+    justify-content: end;
+    align-items-center
+}
+
+@utility wrapper {
+    max-width: theme(maxWidth.7xl);
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
