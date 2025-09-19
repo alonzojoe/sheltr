@@ -1,7 +1,5 @@
-import React from "react";
-
 const ComponentA = () => {
-  return <div>Component A</div>;
+  return <div className="text-red-500">Component A</div>;
 };
 
 export default ComponentA;
