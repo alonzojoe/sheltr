@@ -1,8 +1,13 @@
+import React from "react";
+import useToggle from "@/hooks/useToggle";
 import AppLogo from "@/assets/images/shelter-logo-text.png";
 import { IoIosSearch } from "react-icons/io";
 import { RiMenuFold4Fill, RiMenuUnfold4Fill } from "react-icons/ri";
 const Navbar = () => {
-  const togg = true;
+  const [open, toggleOpen] = useToggle();
+
+  const Icon: React.ElementType = open ? RiMenuUnfold4Fill : RiMenuFold4Fill;
+
   return (
     <nav className="fixed top-0 left-0 right-0">
       <div className="flex-between bg-white/60 backdrop-blur-md max-w-7xl mx-auto px-4 py-3">
@@ -29,13 +34,16 @@ const Navbar = () => {
             </a>
           </li>
         </ul>
-        <div className="md-hidden">
-          <RiMenuFold4Fill className="text-dark cursor-pointer text-4xl" />
+        <div className="md:hidden">
+          <Icon
+            onClick={toggleOpen}
+            className="text-dark cursor-pointer text-4xl"
+          />
         </div>
       </div>
       <div
         className={`md:hidden grid transition-all ease-in-out duration-300 ${
-          togg
+          open
             ? "grid-rows-[1fr] opacity-100 translate-y-0 scale-100"
             : "grid-rows-[0fr] opacity-0 -translate-y-2 scale-95"
         }`}
