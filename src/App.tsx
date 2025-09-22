@@ -1,10 +1,16 @@
-import ComponentA from "@/components/ComponentA";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingLayout from "@/layouts/LandingLayout";
+import Index from "@/pages/Index";
 
 const App = () => {
   return (
-    <div>
-      <ComponentA />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route element={<LandingLayout />}>
+          <Route index element={<Index />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 };
 
