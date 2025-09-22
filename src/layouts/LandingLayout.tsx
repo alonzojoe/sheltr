@@ -1,9 +1,10 @@
 import { Outlet } from "react-router-dom";
+import Navbar from "@/layouts/landing/components/Navbar";
 
 const LandingLayout = () => {
   return (
     <>
-      <header>Nav</header>
+      <Navbar />
       <main className="text-sm text-sub antialiased">
         <Outlet />
       </main>
