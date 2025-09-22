@@ -3,6 +3,8 @@ import useToggle from "@/hooks/useToggle";
 import AppLogo from "@/assets/images/shelter-logo-text.png";
 import { IoIosSearch } from "react-icons/io";
 import { RiMenuFold4Fill, RiMenuUnfold4Fill } from "react-icons/ri";
+import Wrapper from "@/components/Containers/Wrapper";
+
 const Navbar = () => {
   const [open, toggleOpen] = useToggle();
 
@@ -10,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0">
-      <div className="flex-between bg-white/60 backdrop-blur-md max-w-7xl mx-auto px-4 py-3">
+      <Wrapper className="flex-between bg-white/60 backdrop-blur-md px-4 py-3">
         <img src={AppLogo} height={28} width={130} alt="sheltr-logo" />
         <ul className="hidden md:flex items-center text-primary font-semibold space-x-5 text-base">
           <li className="hover:text-text-sub">
@@ -40,7 +42,7 @@ const Navbar = () => {
             className="text-dark cursor-pointer text-4xl"
           />
         </div>
-      </div>
+      </Wrapper>
       <div
         className={`md:hidden grid transition-all ease-in-out duration-300 ${
           open
