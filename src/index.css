@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @theme {
+    --color-text-dark: #1A1A1A;
     --color-primary: #1E3240;
     --color-accent: ##ECF1F8;
     --color-text-title: #212121;
@@ -36,7 +37,6 @@
 
 @utility wrapper {
     max-width: theme(maxWidth.7xl);
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     width: 100%;
 }
