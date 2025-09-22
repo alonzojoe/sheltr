@@ -4,7 +4,7 @@ const LandingLayout = () => {
   return (
     <>
       <header>Nav</header>
-      <main>
+      <main className="text-sm text-sub antialiased">
         <Outlet />
       </main>
     </>
