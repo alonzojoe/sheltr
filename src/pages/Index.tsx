@@ -1,5 +1,5 @@
 import HeroSection from "@/features/Hero/components/HeroSection";
-import StatsSection from "@/features/Hero/components/StatsSection";
+import StatsSection from "@/features/Stats/StatsSection";
 const Index = () => {
   return (
     <>
