@@ -1,6 +1,7 @@
+import Button from "@/components/UI/Button";
 import Wrapper from "@/components/Containers/Wrapper";
 import HeroImg from "@/assets/images/hero.png";
-import { FaStar } from "react-icons/fa6";
+import { FaStar, FaArrowRight } from "react-icons/fa6";
 const HeroSection = () => {
   return (
     <section id="home" className="pt-20 lg:pt-32">
@@ -47,6 +48,14 @@ const HeroSection = () => {
               <span className="text-text-sub text-base">Lorem ipsum</span>
             </div>
           </div>
+          <div className="flex items-center gap-5">
+            <Button className="bg-primary text-white text-base py-3 px-4 hover:opacity-95">
+              Envision your next home
+            </Button>
+            <Button className="border border-primary text-primary text-base py-3 px-4 hover:bg-primary hover:text-white transition-all duration-300 ease-in-out">
+              Contact us
+            </Button>
+          </div>
         </div>
         <div className="flex items-center justify-end relative">
           <img
@@ -54,6 +63,11 @@ const HeroSection = () => {
             src={HeroImg}
             alt="hero-img"
           />
+          <Button className="absolute bottom-5 right-10 bg-white px-4 py-3 flex items-center gap-2 text-base">
+            <span>Interested in this home?</span>
+            <span className="font-semibold">Check it out!</span>
+            <FaArrowRight />
+          </Button>
         </div>
       </Wrapper>
     </section>
