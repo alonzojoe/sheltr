@@ -1,4 +1,5 @@
 import Button from "@/components/UI/Button";
+import FeatureStar from "@/features/Hero/components/FeatureStar";
 import Wrapper from "@/components/Containers/Wrapper";
 import HeroImg from "@/assets/images/hero.png";
 import { FaStar, FaArrowRight } from "react-icons/fa6";
@@ -15,38 +16,9 @@ const HeroSection = () => {
             eiusmod tempor incididunt
           </p>
           <div className="flex items-center gap-7">
-            <div className="flex flex-col space-y-1 items-center">
-              <div className="flex items-center gap-2">
-                {Array.from({ length: 5 })
-                  .map((_, index) => index + 1)
-                  .map((item) => (
-                    <FaStar className="text-primary" key={item} />
-                  ))}
-              </div>
-              <span className="text-text-sub text-base">Lorem ipsum</span>
-            </div>
-
-            <div className="flex flex-col space-y-1 items-center">
-              <div className="flex items-center gap-2">
-                {Array.from({ length: 5 })
-                  .map((_, index) => index + 1)
-                  .map((item) => (
-                    <FaStar className="text-primary" key={item} />
-                  ))}
-              </div>
-              <span className="text-text-sub text-base">Lorem ipsum</span>
-            </div>
-
-            <div className="flex flex-col space-y-1 items-center">
-              <div className="flex items-center gap-2">
-                {Array.from({ length: 5 })
-                  .map((_, index) => index + 1)
-                  .map((item) => (
-                    <FaStar className="text-primary" key={item} />
-                  ))}
-              </div>
-              <span className="text-text-sub text-base">Lorem ipsum</span>
-            </div>
+            <FeatureStar value={5} />
+            <FeatureStar value={4} />
+            <FeatureStar value={4} />
           </div>
           <div className="flex items-center gap-5">
             <Button className="bg-primary text-white text-base py-3 px-4 hover:opacity-95">
