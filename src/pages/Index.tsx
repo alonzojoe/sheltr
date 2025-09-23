@@ -1,10 +1,12 @@
-import HeroSection from "@/features/Hero/components/HeroSection";
-import StatsSection from "@/features/Hero/components/StatsSection";
+import HeroSection from "@/features/Hero/HeroSection";
+import StatsSection from "@/features/Stats/StatsSection";
+import DiscoverySection from "@/features/Discovery/DiscoverySection";
 const Index = () => {
   return (
     <>
       <HeroSection />
       <StatsSection />
+      <DiscoverySection />
     </>
   );
 };

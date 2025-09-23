@@ -2,7 +2,7 @@ import Button from "@/components/UI/Button";
 import FeatureStar from "@/features/Hero/components/FeatureStar";
 import Wrapper from "@/components/Containers/Wrapper";
 import HeroImg from "@/assets/images/hero.png";
-import { FaStar, FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight } from "react-icons/fa6";
 const HeroSection = () => {
   return (
     <section id="home" className="pt-20 lg:pt-32">
@@ -21,7 +21,7 @@ const HeroSection = () => {
             <FeatureStar value={4} />
           </div>
           <div className="flex justify-center md:justify-start items-center gap-5 mb-10">
-            <Button className="bg-primary text-white text-base py-3 px-4 hover:opacity-95">
+            <Button className="bg-primary border border-primary text-white text-base py-3 px-4 hover:opacity-95">
               Envision your next home
             </Button>
             <Button className="border border-primary text-primary text-base py-3 px-4 hover:bg-primary hover:text-white transition-all duration-300 ease-in-out">
