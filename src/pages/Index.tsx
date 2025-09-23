@@ -1,5 +1,10 @@
+import HeroSection from "@/features/Hero/components/HeroSection";
 const Index = () => {
-  return <div>Landing Page</div>;
+  return (
+    <>
+      <HeroSection />
+    </>
+  );
 };
 
 export default Index;
