@@ -11,8 +11,8 @@ const Navbar = () => {
   const Icon: React.ElementType = open ? RiMenuUnfold4Fill : RiMenuFold4Fill;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-100">
-      <Wrapper className="flex-between bg-white/60 backdrop-blur-md px-4 py-3">
+    <nav className="fixed top-0 left-0 bg-white/60 backdrop-blur-md right-0 z-100">
+      <Wrapper className="flex-between px-4 py-3">
         <img src={AppLogo} height={28} width={130} alt="sheltr-logo" />
         <ul className="hidden md:flex items-center text-primary font-semibold space-x-5 text-base">
           <li className="hover:text-text-sub">
