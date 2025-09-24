@@ -24,7 +24,7 @@ const DiscoverySection = () => {
             Trough the help of advanced videocameras we’re bringing you the
             possibility to experience your next house like your on google maps!
           </p>
-          <div className="flex items-center gap-10">
+          <div className="flex flex-wrap items-center gap-10">
             {DISCOVERY_ITEMS.map((item, index) => (
               <DiscoveryItem
                 key={index + 1}
@@ -33,7 +33,7 @@ const DiscoverySection = () => {
               />
             ))}
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex flex-wrap justify-center md:justify-start items-center gap-5">
             <Button className="bg-primary border border-primary text-white text-base py-3 px-4 hover:opacity-95 flex items-center gap-2">
               Browse propeties <FaArrowRight className="text-sm" />
             </Button>
