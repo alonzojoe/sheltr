@@ -5,10 +5,10 @@ import HeroImg from "@/assets/images/hero.png";
 import { FaArrowRight } from "react-icons/fa6";
 const HeroSection = () => {
   return (
-    <section id="home" className="pt-20 lg:pt-32">
-      <Wrapper className="px-0 pl-0 md:pl-10 py-2 bg-accent grid items-center grid-cols-1 md:grid-cols-2 gap-8">
+    <section id="home" className="pt-20 lg:pt-32 bg-accent">
+      <Wrapper className="px-0 pl-0 md:pl-10 py-2 grid items-center grid-cols-1 md:grid-cols-2 gap-8">
         <div className="flex flex-col space-y-7 order-2 md:order-1">
-          <h1 className="text-center mt-10 md:mt-0 md:text-left text-4xl md:text-title text-text-dark font-bold md:leading-16 whitespace-normal">
+          <h1 className="text-center mt-10 md:mt-0 md:text-left text-4xl md:text-title text-text-dark font-bold tracking-tight md:leading-16 whitespace-normal">
             Your home to find, our comfort achieved
           </h1>
           <p className="text-text-sub text-center md:text-left text-base md:text-body">
