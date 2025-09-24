@@ -2,8 +2,8 @@ import Wrapper from "@/components/Containers/Wrapper";
 import Button from "@/components/UI/Button";
 import HouseImg from "@/assets/images/house.png";
 import { FaArrowRight } from "react-icons/fa6";
-import { FaVrCardboard, FaHeart } from "react-icons/fa6";
-import { GrSwift } from "react-icons/gr";
+import { DISCOVERY_ITEMS } from "@/constants";
+import DiscoveryItem from "@/features/Discovery/components/DiscoveryItem";
 
 const DiscoverySection = () => {
   return (
@@ -25,18 +25,13 @@ const DiscoverySection = () => {
             possibility to experience your next house like your on google maps!
           </p>
           <div className="flex items-center gap-10">
-            <div className="flex items-center gap-3">
-              <FaVrCardboard className="text-3xl text-text-dark" />
-              <span className="text-base text-text-sub">Vr support</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <GrSwift className="text-3xl text-text-dark" />
-              <span className="text-base text-text-sub">Fast & Easy</span>
-            </div>
-            <div className="flex items-center gap-3">
-              <FaHeart className="text-3xl text-text-dark" />
-              <span className="text-base text-text-sub">Most liked</span>
-            </div>
+            {DISCOVERY_ITEMS.map((item, index) => (
+              <DiscoveryItem
+                key={index + 1}
+                Icon={item.Icon}
+                label={item.label}
+              />
+            ))}
           </div>
           <div className="flex items-center gap-5">
             <Button className="bg-primary border border-primary text-white text-base py-3 px-4 hover:opacity-95 flex items-center gap-2">
