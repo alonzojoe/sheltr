@@ -1,5 +1,6 @@
 import Wrapper from "@/components/Containers/Wrapper";
 import SectionHeader from "@/components/shared/SectionHeader";
+import Switcher from "./components/Switcher";
 const ListingsSection = () => {
   return (
     <div>
@@ -8,6 +9,7 @@ const ListingsSection = () => {
           title={`Based on your location`}
           subTitle={`Start discover your liking future home`}
         />
+        <Switcher />
       </Wrapper>
     </div>
   );
