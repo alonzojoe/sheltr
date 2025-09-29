@@ -1,17 +1,22 @@
 
 import api from "@/services"
+import { type Rentals } from "@/types"
 
-export const fetchRentals = async (type: string) => {
+export const fetchRentals = async (): Promise<Rentals[]> => {
     try {
-        const res = api.get('/src/data/data.json')
+        const res = await api.get<Rentals[]>('/data/data.json')
+
+        if (!Array.isArray(res.data)) throw new Error('Invalid response');
 
         return res.data
     } catch (error) {
-        if (!(error instanceof Error)) {
+        if (error instanceof Error) {
+
+            console.log('Caugth Error: ', error.message)
+        } else {
             console.log('Unknown Error: ', error)
-            return
         }
-        console.log('Caugth Error: ', error.message)
+
         throw error
     }
 }
