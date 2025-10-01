@@ -1,4 +1,6 @@
+import { useState } from "react";
 import GridContainer from "@/components/Containers/GridContainer";
+import { ImageCarousel } from "./ImageCarousel";
 import { FaKitchenSet, FaWifi, FaTv } from "react-icons/fa6";
 import { FaSwimmingPool } from "react-icons/fa";
 
@@ -31,12 +33,20 @@ type RentalItemProps = {
 };
 
 export const RentalItem = ({ rental }: RentalItemProps) => {
+  const [activeImage, setActiveImage] = useState<number>(0);
+
   return (
     <div className="group cursor-pointer">
       <div className="relative aspect-square overflow-hidden rounded-xl mb-3">
+        <ImageCarousel
+          active={activeImage}
+          onSelectImg={setActiveImage}
+          className="bottom-3 left-1/2 -translate-x-1/2  absolute z-100"
+          images={rental.images}
+        />
         <img
           className="h-auto w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
-          src={rental.images[0]}
+          src={rental.images[activeImage]}
           alt={rental.name}
         />
       </div>
