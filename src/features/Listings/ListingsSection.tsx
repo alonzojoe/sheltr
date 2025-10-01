@@ -6,7 +6,7 @@ import { fetchRentals } from "@/services/api-calls/rentals";
 import GridContainer from "@/components/Containers/GridContainer";
 import { FaKitchenSet, FaWifi, FaTv } from "react-icons/fa6";
 import { FaSwimmingPool } from "react-icons/fa";
-import { IoLocationSharp } from "react-icons/io5";
+
 const ListingsSection = () => {
   const { data } = useQuery({
     queryKey: ["rentals"],
