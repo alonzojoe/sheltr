@@ -22,9 +22,13 @@ const ListingsSection = () => {
         />
         <Switcher />
         {error ? (
-          <div>{error?.message || "Something went wrong"}</div>
+          <div className="text-red-500 text-center font-semibold text-lg">
+            {"Something went wrong :("}
+          </div>
         ) : isFetching ? (
-          <div>Loading</div>
+          <div className="text-primary text-center font-semibold text-lg">
+            Loading...
+          </div>
         ) : (
           <Rentals rentals={data} />
         )}

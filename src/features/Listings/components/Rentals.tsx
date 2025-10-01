@@ -10,7 +10,11 @@ type RentalProps = {
 
 const Rentals = ({ rentals }: RentalProps) => {
   if (rentals?.length === 0) {
-    return <div className="text-center py-8">No rentals found</div>;
+    return (
+      <div className="text-primary text-center font-semibold text-lg py-8">
+        No rentals found.
+      </div>
+    );
   }
 
   return (
