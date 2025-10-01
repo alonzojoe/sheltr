@@ -45,7 +45,8 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
           onSelectImg={setActiveImage}
         />
         <img
-          className="h-auto w-full object-cover object-bottom transition-transform duration-300 group-hover:scale-105"
+          key={activeImage}
+          className="h-auto w-full object-cover object-bottom animate-fadeIn transition-all duration-300 ease-out group-hover:scale-105 animate-fade-in animate"
           src={rental.images[activeImage]}
           alt={rental.name}
         />
