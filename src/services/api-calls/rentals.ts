@@ -1,10 +1,10 @@
 
 import api from "@/services"
-import { type Rentals } from "@/types"
+import { type Rental } from "@/types"
 
-export const fetchRentals = async (): Promise<Rentals[]> => {
+export const fetchRentals = async (): Promise<Rental[]> => {
     try {
-        const res = await api.get<Rentals[]>('/data/data.json')
+        const res = await api.get<Rental[]>('/data/data.json')
 
         if (!Array.isArray(res.data)) throw new Error('Invalid response');
 

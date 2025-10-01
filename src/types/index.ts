@@ -5,7 +5,7 @@ export interface IDiscoveryItem {
     label: string;
 }
 
-export type Rentals = {
+export type Rental = {
     id: number
     name: string
     location: string
