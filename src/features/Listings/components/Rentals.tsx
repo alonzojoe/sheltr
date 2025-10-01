@@ -37,7 +37,7 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
 
   return (
     <div className="group cursor-pointer">
-      <div className="relative aspect-square overflow-hidden rounded-xl mb-3">
+      <div className="relative aspect-square overflow-hidden rounded-xl select-none mb-3">
         <ImageSelector
           className="w-full absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-100"
           images={rental.images}
