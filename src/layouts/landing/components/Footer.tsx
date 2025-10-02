@@ -3,6 +3,10 @@ import Logo from "@/assets/images/shelter-logo-text.png";
 import { MdLocalPhone, MdMail } from "react-icons/md";
 
 const Footer = () => {
+  const date = new Date();
+
+  const year = date.getFullYear();
+
   return (
     <Wrapper className="px-3 py-2 border-t border-gray-300 mt-30">
       <div className="pt-10 flex justify-between flex-wrap gap-10">
@@ -92,6 +96,23 @@ const Footer = () => {
             </li>
             <li className="text-text-sub text-sm">
               <a href="#">Sheltr emergency stays</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div className="flex-between flex-wrap pt-10">
+        <div className="flex gap-10">
+          <p className="text-sm text-text-sub">&copy; Sheltr, Inc. {year}</p>
+
+          <ul className="list-disc text-sm text-text-sub flex items-center gap-10">
+            <li>
+              <a href="">Terms</a>
+            </li>
+            <li>
+              <a href="">Sitemap</a>
+            </li>
+            <li>
+              <a href="">Privacy</a>
             </li>
           </ul>
         </div>
