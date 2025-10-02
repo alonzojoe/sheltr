@@ -1,7 +1,9 @@
 import Wrapper from "@/components/Containers/Wrapper";
 import Logo from "@/assets/images/shelter-logo-text.png";
 import { MdLocalPhone, MdMail } from "react-icons/md";
-
+import { TbWorld } from "react-icons/tb";
+import { FaPesoSign, FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   const date = new Date();
 
@@ -100,8 +102,8 @@ const Footer = () => {
           </ul>
         </div>
       </div>
-      <div className="flex-between flex-wrap pt-10">
-        <div className="flex gap-10">
+      <div className="flex-between flex-wrap gap-5 pt-10">
+        <div className="flex flex-wrap gap-5 sm:gap-10">
           <p className="text-sm text-text-sub">&copy; Sheltr, Inc. {year}</p>
 
           <ul className="list-disc text-sm text-text-sub flex items-center gap-10">
@@ -115,6 +117,29 @@ const Footer = () => {
               <a href="">Privacy</a>
             </li>
           </ul>
+        </div>
+        <div className="flex items-center gap-4">
+          <div className="flex gap-2 items-center text-sm text-text-sub">
+            <TbWorld /> Philippines
+          </div>
+          <div className="flex gap-2 items-center text-sm text-text-sub">
+            <FaPesoSign /> PHP
+          </div>
+          <div className="text-sm text-text-sub">
+            <a href="#">
+              <FaFacebook />
+            </a>
+          </div>
+          <div className="text-sm text-text-sub">
+            <a href="#">
+              <FaXTwitter />
+            </a>
+          </div>
+          <div className="text-sm text-text-sub">
+            <a href="#">
+              <FaInstagram />
+            </a>
+          </div>
         </div>
       </div>
     </Wrapper>
