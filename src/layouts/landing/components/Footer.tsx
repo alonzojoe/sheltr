@@ -1,5 +1,4 @@
 import Wrapper from "@/components/Containers/Wrapper";
-import GridContainer from "@/components/Containers/GridContainer";
 import Logo from "@/assets/images/shelter-logo-text.png";
 import { MdLocalPhone, MdMail } from "react-icons/md";
 
