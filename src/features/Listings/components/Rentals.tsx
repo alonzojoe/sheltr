@@ -37,6 +37,8 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
   const { rateType } = useAppSelector((state) => state.rentals);
   const [activeImage, setActiveImage] = useState<number>(0);
 
+  const label = rateType === "daily" ? "night" : "month";
+
   return (
     <div className="group cursor-pointer">
       <div className="relative aspect-square overflow-hidden rounded-xl select-none mb-3">
@@ -64,7 +66,7 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
         <div className="flex items-center justify-between">
           <p className="text-base text-text-dark font-semibold">
             ₱{rental.price[rateType]}{" "}
-            <small className="text-text-sub text-sm">/night</small>
+            <small className="text-text-sub text-sm">/{label}</small>
           </p>
           <div className="flex items-center gap-1">
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
