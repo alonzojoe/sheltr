@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 interface RentalSlice {
     rateType: 'daily' | 'monthly',
@@ -12,7 +12,7 @@ const rentalSlice = createSlice({
     name: "rentals",
     initialState,
     reducers: {
-        updateRate(state, action) {
+        updateRate(state, action: PayloadAction<'daily' | 'monthly'>) {
             state.rateType = action.payload
         }
     }
