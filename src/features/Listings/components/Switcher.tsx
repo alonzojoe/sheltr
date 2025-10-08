@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { TiHomeOutline } from "react-icons/ti";
+import { MdCalendarMonth } from "react-icons/md";
 import { cn } from "@/lib/utils";
+import { FiSun } from "react-icons/fi";
 
 const MODE = {
   rentals: "Rentals",
@@ -25,7 +25,7 @@ const Switcher = () => {
               }`
             )}
           >
-            <AiOutlineClockCircle className="my-1" />
+            <FiSun className="my-1" />
           </span>
           <span
             onClick={() => setMode("rentals")}
@@ -35,7 +35,7 @@ const Switcher = () => {
               }`
             )}
           >
-            <TiHomeOutline className="my-1" />
+            <MdCalendarMonth className="my-1" />
           </span>
         </div>
         <span className="mx-3 text-text-sub text-sm">{MODE[mode]}</span>

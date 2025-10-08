@@ -61,7 +61,7 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <p className="text-base text-text-dark font-semibold">
-            ₱{rental.price.perNight}{" "}
+            ₱{rental.price.daily}{" "}
             <small className="text-text-sub text-sm">/night</small>
           </p>
           <div className="flex items-center gap-1">

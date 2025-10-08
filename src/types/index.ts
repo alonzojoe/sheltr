@@ -16,6 +16,6 @@ export type Rental = {
 }
 
 export interface Price {
-    perNight: number
-    perMonth: number
+    daily: number
+    monthly: number
 }
