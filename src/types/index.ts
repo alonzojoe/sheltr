@@ -15,6 +15,8 @@ export type Rental = {
     price: Price
 }
 
+export type RateType = 'daily' | 'monthly'
+
 export interface Price {
     daily: number
     monthly: number

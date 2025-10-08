@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAppSelector } from "@/store/hooks/hook";
 import GridContainer from "@/components/Containers/GridContainer";
 import { ImageCarousel, ImageSelector } from "./ImageChanger";
 import { FaKitchenSet, FaWifi, FaTv } from "react-icons/fa6";
@@ -33,6 +34,7 @@ type RentalItemProps = {
 };
 
 export const RentalItem = ({ rental }: RentalItemProps) => {
+  const { rateType } = useAppSelector((state) => state.rentals);
   const [activeImage, setActiveImage] = useState<number>(0);
 
   return (
@@ -61,7 +63,7 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <p className="text-base text-text-dark font-semibold">
-            ₱{rental.price.daily}{" "}
+            ₱{rental.price[rateType]}{" "}
             <small className="text-text-sub text-sm">/night</small>
           </p>
           <div className="flex items-center gap-1">

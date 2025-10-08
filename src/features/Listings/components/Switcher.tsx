@@ -1,44 +1,41 @@
-import { useState } from "react";
-import { MdCalendarMonth } from "react-icons/md";
+import { useAppSelector, useAppDispatch } from "@/store/hooks/hook";
+import { updateRate } from "@/store/slices/rental-slice";
 import { cn } from "@/lib/utils";
+import { MdCalendarMonth } from "react-icons/md";
 import { FiSun } from "react-icons/fi";
 
-const MODE = {
-  rentals: "Rentals",
-  recent: "Recent",
-} as const;
-
-type Mode = keyof typeof MODE;
-
 const Switcher = () => {
-  const [mode, setMode] = useState<Mode>("recent");
+  const dispatch = useAppDispatch();
+  const { rateType } = useAppSelector((state) => state.rentals);
+
+  const rate = rateType.charAt(0).toUpperCase() + rateType.slice(1);
 
   return (
     <>
       <div className="flex items-center my-10">
         <div className="flex items-center bg-accent">
           <span
-            onClick={() => setMode("recent")}
+            onClick={() => dispatch(updateRate("daily"))}
             className={cn(
               `cursor-pointer text-primary text-base px-3 py-2, ${
-                mode === "recent" && "text-white bg-primary"
+                rateType === "daily" && "text-white bg-primary"
               }`
             )}
           >
             <FiSun className="my-1" />
           </span>
           <span
-            onClick={() => setMode("rentals")}
+            onClick={() => dispatch(updateRate("monthly"))}
             className={cn(
               `cursor-pointer text-primary text-base px-3 py-2, ${
-                mode === "rentals" && "text-white bg-primary"
+                rateType === "monthly" && "text-white bg-primary"
               }`
             )}
           >
             <MdCalendarMonth className="my-1" />
           </span>
         </div>
-        <span className="mx-3 text-text-sub text-sm">{MODE[mode]}</span>
+        <span className="mx-3 text-text-sub text-sm">{rate}</span>
       </div>
     </>
   );
