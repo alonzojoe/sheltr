@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useAppSelector } from "@/store/hooks/hook";
 import GridContainer from "@/components/Containers/GridContainer";
 import { ImageCarousel, ImageSelector } from "./ImageChanger";
 import { FaKitchenSet, FaWifi, FaTv } from "react-icons/fa6";
@@ -33,7 +34,10 @@ type RentalItemProps = {
 };
 
 export const RentalItem = ({ rental }: RentalItemProps) => {
+  const { rateType } = useAppSelector((state) => state.rentals);
   const [activeImage, setActiveImage] = useState<number>(0);
+
+  const label = rateType === "daily" ? "night" : "month";
 
   return (
     <div className="group cursor-pointer">
@@ -61,8 +65,8 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <p className="text-base text-text-dark font-semibold">
-            ₱{rental.price.perNight}{" "}
-            <small className="text-text-sub text-sm">/night</small>
+            ₱{rental.price[rateType]}{" "}
+            <small className="text-text-sub text-sm">/{label}</small>
           </p>
           <div className="flex items-center gap-1">
             <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">

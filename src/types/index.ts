@@ -15,7 +15,9 @@ export type Rental = {
     price: Price
 }
 
+export type RateType = 'daily' | 'monthly'
+
 export interface Price {
-    perNight: number
-    perMonth: number
+    daily: number
+    monthly: number
 }

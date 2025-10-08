@@ -13,8 +13,8 @@
         "slug": "lovely-1br-condo-at-grasstower5-qc-wifi-cable",
         "ratings": "4.0",
         "price": {
-            "perNight": 1800.00,
-            "perMonth": 45000.00
+            "daily": 1800.00,
+            "monthly": 45000.00
         }
     },
     {
@@ -31,8 +31,8 @@
         "slug": "lovely-1br-condo-at-grasstower5-qc-wifi-cable",
         "ratings": "4.0",
         "price": {
-            "perNight": 1800.00,
-            "perMonth": 45000.00
+            "daily": 1800.00,
+            "monthly": 45000.00
         }
     },
     {
@@ -49,8 +49,8 @@
         "slug": "lovely-1br-condo-at-grasstower5-qc-wifi-cable",
         "ratings": "4.0",
         "price": {
-            "perNight": 1800.00,
-            "perMonth": 45000.00
+            "daily": 1800.00,
+            "monthly": 45000.00
         }
     },
     {
@@ -67,8 +67,8 @@
         "slug": "lovely-1br-condo-at-grasstower5-qc-wifi-cable",
         "ratings": "4.0",
         "price": {
-            "perNight": 1800.00,
-            "perMonth": 45000.00
+            "daily": 1800.00,
+            "monthly": 45000.00
         }
     }
 ]
