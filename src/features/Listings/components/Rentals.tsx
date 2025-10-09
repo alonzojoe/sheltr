@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useAppSelector } from "@/store/hooks/hook";
 import GridContainer from "@/components/Containers/GridContainer";
 import { ImageCarousel, ImageSelector } from "./ImageChanger";
@@ -37,6 +38,8 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
   const { rateType } = useAppSelector((state) => state.rentals);
   const [activeImage, setActiveImage] = useState<number>(0);
 
+  const navigate = useNavigate();
+
   const label = rateType === "daily" ? "night" : "month";
 
   return (
@@ -48,12 +51,19 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
           active={activeImage}
           onSelectImg={setActiveImage}
         />
+
         <img
           key={activeImage}
           className="h-auto w-full object-cover object-bottom animate-fadeIn transition-all duration-300 ease-out group-hover:scale-105 animate-fade-in animate"
           src={rental.images[activeImage]}
           alt={rental.name}
         />
+
+        {/* <div
+          onClick={() => alert("sd")}
+          className="absolute bg-red-300 inset-0 cursor-pointer z-80"
+        /> */}
+
         <ImageCarousel
           active={activeImage}
           onSelectImg={setActiveImage}
@@ -62,7 +72,10 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
         />
       </div>
 
-      <div className="space-y-3">
+      <div
+        className="space-y-3"
+        onClick={() => navigate(`/rentals/${rental.slug}`)}
+      >
         <div className="flex items-center justify-between">
           <p className="text-base text-text-dark font-semibold">
             ₱{rental.price[rateType]}{" "}
