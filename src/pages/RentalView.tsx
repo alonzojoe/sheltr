@@ -18,9 +18,23 @@ const RentalView = () => {
     queryFn: () => viewRental(slug),
   });
 
+  console.log("data", data);
+
+  if (!data) return <p>Loading...</p>;
+
   return (
     <div className="pt-20 lg:pt-32 ">
-      <Wrapper className="px-3 py-2">{slug}</Wrapper>
+      <Wrapper className="px-3 py-2">
+        <div className="flex items-center">
+          <div className="flex-1">
+            <h2 className="text-text-dark text-3xl">{data.name}</h2>
+          </div>
+          <div className="bg-yellow-500">
+            <span>A</span>
+            <span>B</span>
+          </div>
+        </div>
+      </Wrapper>
     </div>
   );
 };
