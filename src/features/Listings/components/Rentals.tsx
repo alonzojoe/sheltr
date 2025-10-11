@@ -115,7 +115,7 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
             <span>Pool</span>
           </div>
         </GridContainer>
-        <div className="flex items-center justify-end gap-2 text-text-sub">
+        <div className="md:hidden flex items-center justify-end gap-2 text-text-sub">
           <div className="border hover:bg-primary hover:text-white border-gray-400 rounded-3xl px-2 py-1 flex items-center gap-2">
             <FaEye className="inline-block mt-0" />
             <span className="font-semibold text-sm mt-0">View more</span>
