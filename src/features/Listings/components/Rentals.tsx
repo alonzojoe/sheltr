@@ -4,6 +4,7 @@ import { useAppSelector } from "@/store/hooks/hook";
 import GridContainer from "@/components/Containers/GridContainer";
 import { ImageCarousel, ImageSelector } from "./ImageChanger";
 import { FaKitchenSet, FaWifi, FaTv } from "react-icons/fa6";
+import { FaEye } from "react-icons/fa";
 import { FaSwimmingPool } from "react-icons/fa";
 
 import { type Rental } from "@/types";
@@ -114,6 +115,12 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
             <span>Pool</span>
           </div>
         </GridContainer>
+        <div className="md:hidden flex items-center justify-end gap-2 text-text-sub">
+          <div className="border hover:bg-primary hover:text-white border-gray-400 rounded-3xl px-2 py-1 flex items-center gap-2">
+            <FaEye className="inline-block mt-0" />
+            <span className="font-semibold text-sm mt-0">View more</span>
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -70,14 +70,14 @@ export const ImageSelector = ({
       <PiCaretCircleLeftFill
         onClick={moveLeft}
         className={cn(
-          `text-white text-4xl ml-2 transition-transform duration-300 hover:shadow-2xl hover:scale-110 block`,
+          `text-white text-6xl  md:text-4xl ml-2 transition-transform duration-300 hover:shadow-2xl hover:scale-110 block`,
           active === 0 && "opacity-0"
         )}
       />
       <PiCaretCircleRightFill
         onClick={moveRight}
         className={cn(
-          `text-white text-4xl mr-2 transition-transform duration-300 hover:shadow-2xl hover:scale-110 block`,
+          `text-white text-6xl md:text-4xl mr-2 transition-transform duration-300 hover:shadow-2xl hover:scale-110 block`,
           active === images.length - 1 && "opacity-0"
         )}
       />
