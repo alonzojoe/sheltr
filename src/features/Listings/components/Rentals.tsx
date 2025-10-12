@@ -6,6 +6,7 @@ import { ImageCarousel, ImageSelector } from "./ImageChanger";
 import { FaKitchenSet, FaWifi, FaTv } from "react-icons/fa6";
 import { FaEye } from "react-icons/fa";
 import { FaSwimmingPool } from "react-icons/fa";
+import { formatPrice } from "@/lib/utils";
 
 import { type Rental } from "@/types";
 
@@ -79,7 +80,7 @@ export const RentalItem = ({ rental }: RentalItemProps) => {
       >
         <div className="flex items-center justify-between">
           <p className="text-base text-text-dark font-semibold">
-            ₱{rental.price[rateType]}{" "}
+            ₱{formatPrice(rental.price[rateType])}{" "}
             <small className="text-text-sub text-sm">/{label}</small>
           </p>
           <div className="flex items-center gap-1">
