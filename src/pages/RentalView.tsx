@@ -27,7 +27,9 @@ const RentalView = () => {
       <Wrapper className="px-3 py-2">
         <div className="flex items-center">
           <div className="flex-1">
-            <h2 className="text-text-dark text-3xl">{data.name}</h2>
+            <h2 className="text-text-dark text-2xl font-semibold">
+              {data.name}
+            </h2>
           </div>
           <div className="bg-yellow-500">
             <span>A</span>
