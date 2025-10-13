@@ -2,7 +2,9 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { viewRental } from "@/services/api-calls/rentals";
 import Wrapper from "@/components/Containers/Wrapper";
+import IconButton from "@/components/UI/IconButton";
 import { Navigate } from "react-router-dom";
+import { FiShare } from "react-icons/fi";
 
 type Params = {
   slug: string;
@@ -31,8 +33,12 @@ const RentalView = () => {
               {data.name}
             </h2>
           </div>
-          <div className="bg-yellow-500">
-            <span>A</span>
+          <div className="flex items-center gap-2">
+            <IconButton
+              className="text-base text-text-dark font-semibold"
+              title="Share"
+              Icon={FiShare}
+            />
             <span>B</span>
           </div>
         </div>

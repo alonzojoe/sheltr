@@ -10,13 +10,13 @@ const IconButton = ({ title, Icon, className, ...props }: IconButton) => {
   return (
     <button
       className={cn(
-        "cursor-pointer flex items-center gap-1 bg-white px-2 py-1 rounded-md",
+        "cursor-pointer flex items-center gap-2 bg-white px-2 py-1 rounded-md hover:bg-gray-200/60",
         className
       )}
       {...props}
     >
       <Icon />
-      {title}
+      <span className="underline">{title}</span>
     </button>
   );
 };
