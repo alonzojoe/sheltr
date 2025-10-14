@@ -4,7 +4,7 @@ import { viewRental } from "@/services/api-calls/rentals";
 import Wrapper from "@/components/Containers/Wrapper";
 import IconButton from "@/components/UI/IconButton";
 import { Navigate } from "react-router-dom";
-import { FiShare } from "react-icons/fi";
+import { FiShare, FiHeart } from "react-icons/fi";
 
 type Params = {
   slug: string;
@@ -39,7 +39,11 @@ const RentalView = () => {
               title="Share"
               Icon={FiShare}
             />
-            <span>B</span>
+            <IconButton
+              className="text-base text-text-dark font-semibold"
+              title="Save"
+              Icon={FiHeart}
+            />
           </div>
         </div>
       </Wrapper>
