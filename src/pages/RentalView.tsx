@@ -2,9 +2,7 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import { viewRental } from "@/services/api-calls/rentals";
 import Wrapper from "@/components/Containers/Wrapper";
-import IconButton from "@/components/UI/IconButton";
 import { Navigate } from "react-router-dom";
-import { FiShare, FiHeart } from "react-icons/fi";
 import RentalViewHeder from "@/features/Rentals/components/RentalViewHeder";
 
 type Params = {
