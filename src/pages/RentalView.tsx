@@ -4,6 +4,7 @@ import { viewRental } from "@/services/api-calls/rentals";
 import Wrapper from "@/components/Containers/Wrapper";
 import { Navigate } from "react-router-dom";
 import RentalViewHeder from "@/features/Rentals/components/RentalViewHeder";
+import RentalImages from "@/features/Rentals/components/RentalImages";
 
 type Params = {
   slug: string;
@@ -27,6 +28,7 @@ const RentalView = () => {
     <div className="pt-20 lg:pt-32 ">
       <Wrapper className="px-3 py-2">
         <RentalViewHeder name={data.name} />
+        <RentalImages images={data.images} />
       </Wrapper>
     </div>
   );
