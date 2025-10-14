@@ -5,6 +5,7 @@ import Wrapper from "@/components/Containers/Wrapper";
 import IconButton from "@/components/UI/IconButton";
 import { Navigate } from "react-router-dom";
 import { FiShare, FiHeart } from "react-icons/fi";
+import RentalViewHeder from "@/features/Rentals/components/RentalViewHeder";
 
 type Params = {
   slug: string;
@@ -27,25 +28,7 @@ const RentalView = () => {
   return (
     <div className="pt-20 lg:pt-32 ">
       <Wrapper className="px-3 py-2">
-        <div className="flex items-center">
-          <div className="flex-1">
-            <h2 className="text-text-dark text-2xl font-semibold">
-              {data.name}
-            </h2>
-          </div>
-          <div className="flex items-center gap-2">
-            <IconButton
-              className="text-base text-text-dark font-semibold"
-              title="Share"
-              Icon={FiShare}
-            />
-            <IconButton
-              className="text-base text-text-dark font-semibold"
-              title="Save"
-              Icon={FiHeart}
-            />
-          </div>
-        </div>
+        <RentalViewHeder name={data.name} />
       </Wrapper>
     </div>
   );
