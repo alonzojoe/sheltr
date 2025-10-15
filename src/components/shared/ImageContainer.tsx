@@ -3,7 +3,7 @@ import type { ComponentProps } from "react";
 
 type ImageContainerProps = {
   image: string;
-  className: string;
+  className?: string;
 } & ComponentProps<"img">;
 
 const ImageContainer = ({
@@ -14,7 +14,7 @@ const ImageContainer = ({
   return (
     <div
       className={cn(
-        "relative aspect-square overflow-hidden rounded-xl mb-3",
+        "relative aspect-square overflow-hidden rounded-xl",
         className
       )}
     >

@@ -1,3 +1,4 @@
+import ImageContainer from "@/components/shared/ImageContainer";
 import { cn } from "@/lib/utils";
 
 type RentalImages = {
@@ -8,20 +9,42 @@ type RentalImages = {
 const RentalImages = ({ images, className }: RentalImages) => {
   return (
     <div className={cn("my-7", className)}>
-      <div className="grid grid-cols-7 grid-rows-6 gap-5">
-        <div className="col-span-3 row-span-6">
-          <div className="relative hover:bg-black/60 aspect-square overflow-hidden rounded-xl select-none mb-3">
-            <img
-              className="h-auto w-full object-cover object-bottom animate-fadeIn transition-all duration-300 ease-out group-hover:scale-105 animate-fade-in animate"
-              src={images[0]}
-              alt="image"
-            />
-          </div>
+      <div className="grid grid-cols-4 grid-rows-5 gap-4">
+        <div className="col-span-2 row-span-4">
+          <ImageContainer
+            className="cursor-pointer"
+            image={images[0]}
+            alt={`image-1`}
+          />
         </div>
-        <div className="col-span-2 row-span-3 col-start-4">2</div>
-        <div className="col-span-2 row-span-3 col-start-4 row-start-4">3</div>
-        <div className="col-span-2 row-span-3 col-start-6 row-start-1">4</div>
-        <div className="col-span-2 row-span-3 col-start-6 row-start-4">5</div>
+        <div className="row-span-2 col-start-3">
+          <ImageContainer
+            className="cursor-pointer"
+            image={images[1]}
+            alt={`image-2`}
+          />
+        </div>
+        <div className="row-span-2 col-start-3 row-start-3">
+          <ImageContainer
+            className="cursor-pointer"
+            image={images[2]}
+            alt={`image-3`}
+          />
+        </div>
+        <div className="row-span-2 col-start-4 row-start-1">
+          <ImageContainer
+            className="cursor-pointer"
+            image={images[3]}
+            alt={`image-4`}
+          />
+        </div>
+        <div className="row-span-2 col-start-4 row-start-3">
+          <ImageContainer
+            className="cursor-pointer"
+            image={images[4]}
+            alt={`image-5`}
+          />
+        </div>
       </div>
     </div>
   );
