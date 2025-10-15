@@ -2,7 +2,7 @@
     {
         "id": 1,
         "name": "Lovely 1BR Condo at GrassTower5 QC w/WIFI & Cable",
-        "location": "Trient, Italy TN",
+        "location": "Grass Residences, Quezon City",
         "images": [
             "/src/assets/data/unit1-1.png",
             "/src/assets/data/unit1-2.png",
@@ -20,7 +20,7 @@
     {
         "id": 2,
         "name": "Lovely 1BR Condo at GrassTower5 QC w/WIFI & Cable",
-        "location": "Trient, Italy TN",
+        "location": "Grass Residences, Quezon City",
         "images": [
             "/src/assets/data/unit1-1.png",
             "/src/assets/data/unit1-2.png",
@@ -38,7 +38,7 @@
     {
         "id": 3,
         "name": "Lovely 1BR Condo at GrassTower5 QC w/WIFI & Cable",
-        "location": "Trient, Italy TN",
+        "location": "Grass Residences, Quezon City",
         "images": [
             "/src/assets/data/unit1-1.png",
             "/src/assets/data/unit1-2.png",
@@ -56,7 +56,7 @@
     {
         "id": 4,
         "name": "Lovely 1BR Condo at GrassTower5 QC w/WIFI & Cable",
-        "location": "Trient, Italy TN",
+        "location": "Grass Residences, Quezon City",
         "images": [
             "/src/assets/data/unit1-1.png",
             "/src/assets/data/unit1-2.png",
