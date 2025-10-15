@@ -9,7 +9,7 @@ type RentalImages = {
 const RentalImages = ({ images, className }: RentalImages) => {
   return (
     <div className={cn("my-7", className)}>
-      <div className="grid grid-cols-4 grid-rows-5 gap-4">
+      <div className="grid grid-cols-4 grid-rows-4 gap-4">
         <div className="col-span-2 row-span-4">
           <ImageContainer
             className="cursor-pointer"
