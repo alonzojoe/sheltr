@@ -7,6 +7,7 @@ import RentalViewHeder from "@/features/Rentals/components/RentalViewHeder";
 import RentalImages from "@/features/Rentals/components/RentalImages";
 import { GiCurlyWing } from "react-icons/gi";
 import { FaStar } from "react-icons/fa6";
+import HostImg from "@/assets/images/host.png";
 
 type Params = {
   slug: string;
@@ -72,6 +73,27 @@ const RentalView = () => {
                   </span>
                   <span className="text-[12px] font-semibold">Reviews</span>
                 </div>
+              </div>
+            </div>
+            <div className="flex items-center gap-5">
+              <div className="relative">
+                <div className="h-[50px] w-[50px] rounded-full overflow-hidden">
+                  <img
+                    className="h-full w-full object-cover object-center"
+                    src={HostImg}
+                    alt="host"
+                  />
+                </div>
+                <FaStar className="text-[#E41C5B] absolute text-2xl top-6 -right-2 z-100" />
+              </div>
+
+              <div className="space-y-0">
+                <p className="text-text-dark font-bold mb-0 text-body">
+                  Hosted by Cristina
+                </p>
+                <span className="text-text-sub text-base font-semibold">
+                  Host • 2 years hosting
+                </span>
               </div>
             </div>
           </div>
