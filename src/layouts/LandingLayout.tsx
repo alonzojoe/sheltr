@@ -5,7 +5,7 @@ const LandingLayout = () => {
   return (
     <>
       <Navbar />
-      <main className="text-body text-sub antialiased">
+      <main className="text-base text-sub antialiased">
         <Outlet />
       </main>
       <Footer />

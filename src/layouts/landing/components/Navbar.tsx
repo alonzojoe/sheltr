@@ -52,7 +52,7 @@ const Navbar = () => {
       >
         <div className="overflow-hidden">
           <div className="p-4 bg-white/60 backdrop-blur-md border border-gray-300 rounded-xl mt-2 mx-2">
-            <ul className="flex flex-col text-primary font-semibold text-md space-y-4">
+            <ul className="flex flex-col text-primary font-semibold text-md space-y-4 text-sm">
               <li className="hover:text-text-sub">
                 <a href="#home">Home</a>
               </li>
