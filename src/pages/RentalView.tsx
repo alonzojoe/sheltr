@@ -45,7 +45,9 @@ const RentalView = () => {
         <RentalViewHeder name={data.name} />
         <RentalImages images={data.images} />
         <div
-          className={"flex flex-wrap items-start justify-center gap-10 mt-5"}
+          className={
+            "flex flex-wrap items-start justify-center lg:justify-between gap-10 mt-5"
+          }
         >
           <div className="">
             <h2 className="text-text-dark text-2xl font-semibold">
@@ -113,8 +115,22 @@ const RentalView = () => {
           </div>
           <div className="flex items-center gap-2">
             <div className="w-100 space-y-3 border-border-gray-300 py-7 p-5 rounded-lg shadow-md">
-              <div className="rounded-lg border border-black p-3">
-                <div className="text-text-dark flex justify-between items-center">
+              <div className="rounded-lg border border-black mt-5">
+                <div className="border-b border-black flex items-center justify-between  text-text-dark">
+                  <div className="w-50 p-3">
+                    <span className="block text-[14px] font-bold">
+                      CHECK-IN
+                    </span>
+                    <span>10/31/2025</span>
+                  </div>
+                  <div className="w-50 border-l border-black p-3">
+                    <span className="block text-[14px] font-bold">
+                      CHECKOUT
+                    </span>
+                    <span>11/01/2025</span>
+                  </div>
+                </div>
+                <div className="text-text-dark flex justify-between items-center p-3">
                   <div>
                     <span className="block text-[14px] font-bold">GUEST</span>
                     <span>{guest} guest</span>
