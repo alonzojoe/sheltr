@@ -1,4 +1,5 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { viewRental } from "@/services/api-calls/rentals";
 import Wrapper from "@/components/Containers/Wrapper";
@@ -8,6 +9,7 @@ import RentalImages from "@/features/Rentals/components/RentalImages";
 import { GiCurlyWing } from "react-icons/gi";
 import { FaStar } from "react-icons/fa6";
 import HostImg from "@/assets/images/host.png";
+import { FaPlusCircle, FaMinusCircle } from "react-icons/fa";
 
 type Params = {
   slug: string;
@@ -15,6 +17,7 @@ type Params = {
 
 const RentalView = () => {
   const { slug } = useParams<Params>();
+  const [guest, setGuest] = useState<number>(1);
 
   if (!slug) return <Navigate to="/" />;
 
@@ -25,19 +28,32 @@ const RentalView = () => {
 
   console.log("data", data);
 
+  const handleGuest = (type: "inc" | "dec") => {
+    setGuest((prev) => {
+      if (type === "inc") {
+        return prev < 3 ? prev + 1 : prev;
+      }
+      return prev > 1 ? prev - 1 : prev;
+    });
+  };
+
   if (!data) return <p>Loading...</p>;
 
   return (
-    <div className="pt-20 lg:pt-32 ">
+    <div className="pt-20 lg:pt-25">
       <Wrapper className="px-3 py-2">
         <RentalViewHeder name={data.name} />
         <RentalImages images={data.images} />
-        <div className={"flex items-center mt-10"}>
+        <div
+          className={
+            "flex flex-wrap items-start justify-center lg:justify-between gap-10 mt-5"
+          }
+        >
           <div className="">
-            <h2 className="text-text-dark text-3xl font-semibold">
+            <h2 className="text-text-dark text-2xl font-semibold">
               {data.location}
             </h2>
-            <p className="text-text-sub font-semibold text-base">
+            <p className="text-text-sub text-base">
               2 Guests • 1 bedroom • 1 bed • 1 bath
             </p>
             <div className="my-8 p-5 border border-gray-300 grid grid-cols-1 items-center md:grid-cols-3 rounded-lg">
@@ -91,15 +107,56 @@ const RentalView = () => {
                 <p className="text-text-dark font-bold mb-0 text-body">
                   Hosted by Cristina
                 </p>
-                <span className="text-text-sub text-base font-semibold">
+                <span className="text-text-sub text-base">
                   Host • 2 years hosting
                 </span>
               </div>
             </div>
           </div>
           <div className="flex items-center gap-2">
-            <span></span>
-            <span></span>
+            <div className="w-100 space-y-3 border-border-gray-300 py-7 p-5 rounded-lg shadow-md">
+              <div className="rounded-lg border border-black mt-5">
+                <div className="border-b border-black flex items-center justify-between  text-text-dark">
+                  <div className="w-50 p-3">
+                    <span className="block text-[14px] font-bold">
+                      CHECK-IN
+                    </span>
+                    <span>10/31/2025</span>
+                  </div>
+                  <div className="w-50 border-l border-black p-3">
+                    <span className="block text-[14px] font-bold">
+                      CHECKOUT
+                    </span>
+                    <span>11/01/2025</span>
+                  </div>
+                </div>
+                <div className="text-text-dark flex justify-between items-center p-3">
+                  <div>
+                    <span className="block text-[14px] font-bold">GUEST</span>
+                    <span>{guest} guest</span>
+                  </div>
+                  <div className="flex gap-3">
+                    <button
+                      className="cursor-pointer"
+                      onClick={() => handleGuest("dec")}
+                    >
+                      <FaMinusCircle className="text-2xl hover:scale-[1.1] transition-all duration-200" />
+                    </button>
+                    <button
+                      className="cursor-pointer"
+                      onClick={() => handleGuest("inc")}
+                    >
+                      <FaPlusCircle className="text-2xl hover:scale-[1.1] transition-all duration-200" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex items-center justify-center">
+                <button className="bg-primary p-3 cursor-pointer text-white font-semibold rounded-4xl w-100">
+                  Change dates
+                </button>
+              </div>
+            </div>
           </div>
         </div>
       </Wrapper>
